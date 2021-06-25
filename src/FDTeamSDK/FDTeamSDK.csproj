@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{F97D4452-75D8-4D13-BB72-4A86DBB14BF6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>FDTeamSDK</RootNamespace>
+    <AssemblyName>FDTeamSDK.Lite</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\build\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>..\..\build\FDTeamSDK.Lite.xml</DocumentationFile>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Component\COM\COMRegister.cs" />
+    <Compile Include="Component\ConfigIni.cs" />
+    <Compile Include="Component\ControlInvokeHelper.cs" />
+    <Compile Include="Component\Diagnostics\DebugSupports.cs" />
+    <Compile Include="Component\Diagnostics\NoticeSupports.cs" />
+    <Compile Include="Component\SingletonNormal.cs" />
+    <Compile Include="Component\SystemInfoModule.cs" />
+    <Compile Include="Component\Windows\Interaction.cs" />
+    <Compile Include="Component\Windows\SingletonControl.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\Windows\SingletonForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Component\XHImageCollection.cs" />
+    <Compile Include="DataType\AccessDataPair.cs" />
+    <Compile Include="Define\Define.cs" />
+    <Compile Include="EventSupports\IFDEventArgs.cs" />
+    <Compile Include="EventSupports\IFDEventComponent.cs" />
+    <Compile Include="EventSupports\FDCustomEventArgs.cs" />
+    <Compile Include="EventSupports\FDEventBasicComponent.cs" />
+    <Compile Include="EventSupports\FDEventSingletonComponent.cs" />
+    <Compile Include="GenericSupports\IFDGenericComponent.cs" />
+    <Compile Include="GenericSupports\FDHashTable.cs" />
+    <Compile Include="Graphics2D\XHColorComponent.cs" />
+    <Compile Include="IFDCustomComponent.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\Algorirhms\IAlgorirhmBase.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\EntityMatrixData.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\EvaluationData\DataType.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\EvaluationData\ISimulationInfoBasic.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IndicatorTree\IndicatorTree.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IndicatorTree\IndicatorTreeNode.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IndicatorTree\IndicatorTreeNodeCollection.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IndicatorTree\TreeNodeBindData.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IndicatorTree\TreeNodeDataSource.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\EvaluationExtensions.cs" />
+    <Compile Include="Graphics2D\IXHSDKGraphicsObject.cs" />
+    <Compile Include="IFDSDKObjectBase.cs" />
+    <Compile Include="MathSupports\EquationCoefficient.cs" />
+    <Compile Include="MathSupports\EquationsSupports.cs" />
+    <Compile Include="Extensions\EventExtensions.cs" />
+    <Compile Include="Extensions\FileExtensions.cs" />
+    <Compile Include="Extensions\FormExtensions.cs" />
+    <Compile Include="GenericSupports\Extensions\GenericExtensions.cs" />
+    <Compile Include="Extensions\GeographyExtensions.cs" />
+    <Compile Include="Extensions\XmlExtensions.cs" />
+    <Compile Include="GenericSupports\Base\GenericLine.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IXHSDKEvalAlgorirhm.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\IXHSDKEvaluationObject.cs" />
+    <Compile Include="MathSupports\Geography\GISArea.cs" />
+    <Compile Include="Graphics2D\XHLine.cs" />
+    <Compile Include="MathSupports\EvaluationSupports\Algorirhms\Config\AlgConfig.cs" />
+    <Compile Include="MathSupports\Area.cs" />
+    <Compile Include="MathSupports\Geography\GISPoint.cs" />
+    <Compile Include="MathSupports\IFDArea.cs" />
+    <Compile Include="MathSupports\IFDPoint.cs" />
+    <Compile Include="MathSupports\IFDSDKMathModule.cs" />
+    <Compile Include="MathSupports\IFDSDKMathObject.cs" />
+    <Compile Include="MathSupports\MathExtensions.cs" />
+    <Compile Include="Extensions\StreamExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Extensions\ThreadingExtensions.cs" />
+    <Compile Include="Graphics2D\XHGraphics.cs" />
+    <Compile Include="MathSupports\FloatMatrix.cs" />
+    <Compile Include="MathSupports\PointD.cs" />
+    <Compile Include="MathSupports\RandomBuilder.cs" />
+    <Compile Include="MathSupports\Vector.cs" />
+    <Compile Include="MathSupports\FDPath.cs" />
+    <Compile Include="PatternMatching\PatternMatchingExtensions.cs" />
+    <Compile Include="PatternMatching\ReflectionExtensions.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\SDKResource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SDKResource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="WebSupport\FTPManagement.cs" />
+    <Compile Include="WebSupport\HttpQueryParam.cs" />
+    <Compile Include="WebSupport\NetWork.cs" />
+    <Compile Include="WebSupport\RemoteRequest.cs" />
+    <Compile Include="GenericSupports\Base\IGenericLine.cs" />
+    <Compile Include="FDSDKObjectBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\SDKResource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>SDKResource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="app.config" />
+  </ItemGroup>
+</Project>
