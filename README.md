@@ -1,2 +1,2 @@
 # FDTeamSDK
-方便的FantasicDream软件开发工具集
+FantasicDream编写的 方便的软件开发工具集
