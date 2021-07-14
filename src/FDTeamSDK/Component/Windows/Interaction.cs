@@ -51,10 +51,10 @@ namespace FDSDK.Component.Windows
             int dY = (_Control.DisplayRectangle.Height - finalRectangle.Height) / (2 * actLen);
             t.Tick += (s, e) =>
             {
-                _Control.Left = _Control.Left + dX;
-                _Control.Top = _Control.Top + dY;
-                _Control.Width = _Control.Width + 2 * dX;
-                _Control.Height = _Control.Height + 2 * dY;
+                _Control.Left += dX;
+                _Control.Top += dY;
+                _Control.Width += 2 * dX;
+                _Control.Height += 2 * dY;
                 if (count >= actLen)
                 {
                     _Control.Height = finalRectangle.Height;

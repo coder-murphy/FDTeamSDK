@@ -57,5 +57,25 @@ namespace FDSDK.WebSupports
         /// 参数所携带的Json串
         /// </summary>
         public string Json { get; set; }
+
+        public object testc()
+        {
+            return RemoteRequest.LoadResultData<object>(null, "www.baidu.com", new HttpParam
+            {
+                Json = string.Empty,
+                Params = new List<HttpQueryParam>
+                { 
+                    new HttpQueryParam
+                    {
+                        Key = "userID",
+                        Value = "123456"
+                    }
+                }
+            },
+            Method.POST,
+             ContentType.Text,
+             false
+             );
+        }
     }
 }
