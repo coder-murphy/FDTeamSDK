@@ -22,7 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-    <PlatformTarget>x86</PlatformTarget>
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <Prefer32Bit>false</Prefer32Bit>
     <DocumentationFile>..\..\build\FDTeamSDK.Lite.xml</DocumentationFile>
     <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
@@ -81,6 +81,9 @@
     <Compile Include="EventSupports\FDCustomEventArgs.cs" />
     <Compile Include="EventSupports\FDEventBasicComponent.cs" />
     <Compile Include="EventSupports\FDEventSingletonComponent.cs" />
+    <Compile Include="FunctionProgramming\FDSwitchLine.cs" />
+    <Compile Include="FunctionProgramming\FPExtensions.cs" />
+    <Compile Include="FunctionProgramming\IFDSwitchLine.cs" />
     <Compile Include="GenericSupports\IFDGenericComponent.cs" />
     <Compile Include="GenericSupports\FDHashTable.cs" />
     <Compile Include="Graphics2D\XHColorComponent.cs" />
@@ -162,6 +165,5 @@
     <None Include="..\.editorconfig">
       <Link>.editorconfig</Link>
     </None>
-    <None Include="app.config" />
   </ItemGroup>
 </Project>
