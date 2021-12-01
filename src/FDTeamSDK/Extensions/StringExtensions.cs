@@ -367,6 +367,21 @@ namespace FDSDK.Extensions
             }
             return folder;
         }
+
+        /// <summary>
+        /// 根据谓词过滤字符串中字符
+        /// </summary>
+        /// <param name="str"></param>
+        /// <param name="predicate"></param>
+        /// <returns></returns>
+        public static string Filter(this string str,Predicate<char> predicate)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (var i in str)
+                if (predicate(i) == false) sb.Append(i);
+            return sb.ToString();
+        }
+
     }
 
     /// <summary>

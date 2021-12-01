@@ -210,8 +210,7 @@ namespace FDSDK.Component
         /// </summary>
         protected void OnImageCollectionChanged()
         {
-            if (ImageCollectionChanged != null)
-                ImageCollectionChanged(this, EventArgs.Empty);
+            ImageCollectionChanged?.Invoke(this, EventArgs.Empty);
         }
 
         /// <summary>
@@ -219,8 +218,7 @@ namespace FDSDK.Component
         /// </summary>
         protected void OnImageCollectionInitialization()
         {
-            if (ImageCollectionInitialization != null)
-                ImageCollectionInitialization(this, EventArgs.Empty);
+            ImageCollectionInitialization?.Invoke(this, EventArgs.Empty);
         }
 
         #region GC

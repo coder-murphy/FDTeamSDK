@@ -8,7 +8,7 @@ namespace FDSDK.Component
     /// <summary>
     /// 常规单例模式
     /// </summary>
-    public class SingletonNormal<T> : IDisposable, IFDCustomComponent where T : class,new()
+    public class SingletonNormal<T> : IDisposable, IFDCustomComponent where T : SingletonNormal<T>, new()
     {
         /// <summary>
         /// 该类的唯一实例
@@ -21,7 +21,10 @@ namespace FDSDK.Component
         public static T GetInstance()
         {
             if (Instance == null)
+            {
                 Instance = new T();
+                Instance.SingleProtect();
+            }
             return Instance;
         }
 
